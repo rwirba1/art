@@ -49,11 +49,13 @@ pipeline {
             }
         }
     }
+}   
+    
 
-    post {
-        always {
-            // Cleanup temporary directory
-            sh "rm -rf /tmp/nexus-download"
-        }
-    }
-}
+//     post {
+//         always {
+//             // Cleanup temporary directory
+//             sh "rm -rf /tmp/nexus-download"
+//         }
+//     }
+// }
