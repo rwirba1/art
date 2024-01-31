@@ -30,7 +30,7 @@ pipeline {
 
                         // Download the file from the source URL
                         def encodedSourceUrl = params.SOURCE_FILE_URL.replaceAll(' ', '%20')
-                        sh "curl -u \$NEXUS_USER:\$NEXUS_PASSWORD -o /tmp/nexus-download/${fileName} '${params.SOURCE_FILE_URL}'"
+                        sh "curl -u admin:admin123 -o /tmp/nexus-download/${fileName} '${params.SOURCE_FILE_URL}'"
                     } else {
                         error "Source or Destination URL not defined."
                     }
