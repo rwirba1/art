@@ -44,7 +44,7 @@ pipeline {
                     def fileName = params.SOURCE_FILE_URL.tokenize('/').last()
 
                     // Upload the file to the destination repository
-                    sh "curl -u \$NEXUS_USER:\$NEXUS_PASSWORD --upload-file /tmp/nexus-download/${fileName} '${params.DESTINATION_REPO_URL}${fileName}'"
+                    sh "curl -u admin:admin123 --upload-file /tmp/nexus-download/${fileName} '${params.DESTINATION_REPO_URL}${fileName}'"
                 }
             }
         }
